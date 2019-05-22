@@ -36,8 +36,7 @@ public class DatePickerInputView: UIView {
 
 	public static func create(
 		mode: UIDatePicker.Mode,
-		didSelect: ((Date) -> Void)? = nil,
-		owner: AnyObject
+		didSelect: ((Date) -> Void)? = nil
 		) -> DatePickerInputView {
 		let view = DatePickerInputView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250))
 		view.didSelect = didSelect

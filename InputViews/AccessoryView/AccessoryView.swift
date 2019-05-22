@@ -58,8 +58,8 @@ public class AccessoryView: UIView {
 		_ title: String = "",
 		doneTapped: (() -> Void)? = nil,
 		addTapped: (() -> Void)? = nil,
-		shouldShowAdd: @escaping (() -> Bool) = { return false },
-		owner: AnyObject) -> AccessoryView? {
+		shouldShowAdd: @escaping (() -> Bool) = { return false }
+		) -> AccessoryView? {
 		let view = AccessoryView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
 		view.shouldShowAdd = shouldShowAdd
 		view.doneTapped = doneTapped

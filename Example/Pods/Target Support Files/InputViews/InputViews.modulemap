@@ -1,0 +1,6 @@
+framework module InputViews {
+  umbrella header "InputViews-umbrella.h"
+
+  export *
+  module * { export * }
+}

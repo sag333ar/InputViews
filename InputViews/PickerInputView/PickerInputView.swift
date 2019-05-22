@@ -23,6 +23,8 @@ public class PickerInputView: UIView {
 	public override func didMoveToWindow() {
 		super.didMoveToWindow()
 		pickerView.frame = bounds
+		pickerView.backgroundColor = .white
+		backgroundColor = .white
 		pickerView.reloadAllComponents()
 	}
 
@@ -40,8 +42,7 @@ public class PickerInputView: UIView {
 
 	public static func create(
 		didSelect: ((Int) -> Void)? = nil,
-		items: @escaping (() -> [String]) = { return [] },
-		owner: AnyObject
+		items: @escaping (() -> [String]) = { return [] }
 		) -> PickerInputView {
 		let view = PickerInputView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250))
 		view.didSelect = didSelect

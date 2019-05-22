@@ -51,8 +51,8 @@ public class CollectionInputView: UIView {
 		items: @escaping (() -> [Any]) = { return [] },
 		didSelect: ((Any) -> Void)? = nil,
 		text: @escaping ((Any) -> String) = { _ in return "" },
-		contains: @escaping ((Any) -> Bool) = {_ in return false },
-		owner: AnyObject) -> CollectionInputView {
+		contains: @escaping ((Any) -> Bool) = {_ in return false }
+		) -> CollectionInputView {
 		let view = CollectionInputView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250))
 		view.items = items
 		view.didSelect = didSelect
