@@ -118,3 +118,36 @@ import InputViews
   }
 }
 ```
+
+### Items picker with `UICollectionView` (Screenshot4)
+
+```swift
+@IBOutlet var itemsFromCollectionView: NoCutPasteTextField? {
+  didSet {
+    guard let itemsFromCollectionView = itemsFromCollectionView else { return }
+    let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
+    var selected: [String] = []
+    itemsFromCollectionView.inputView = CollectionInputView.create(items: { () -> [Any] in
+      return array
+    }, didSelect: { (anyObj) in
+      guard let string = anyObj as? String else { return }
+      if let index = selected.firstIndex(of: string) {
+        selected.remove(at: index)
+      } else {
+        selected.append(string)
+      }
+      itemsFromCollectionView.text = selected.joined(separator: ", ")
+    }, text: { (anyObject) -> String in
+      return anyObject as? String ?? ""
+    }, contains: { (anyObj) -> Bool in
+      guard let string = anyObj as? String, selected.firstIndex(of: string) != nil
+        else { return false }
+      return true
+    })
+    // Setting up accessory view
+    itemsFromCollectionView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      itemsFromCollectionView.resignFirstResponder()
+    })
+  }
+}
+```
