@@ -1,5 +1,11 @@
 ![InputViews Title](assets/inputViews.png)
 
+## Examples
+
+| Screenshot1 | Screenshot2 | Screenshot3 | Screenshot4 |
+|------------|------------|------------|----------|
+| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) | ![ItemsPicker](assets/CollectionItemsPicker.gif) |
+
 # InputViews
 
 > Input views for UITextField show PickerView, TableView, Collection, instead of default keyboard
@@ -40,12 +46,6 @@ To get the full benefits import `InputViews` wherever you import UIKit
 import UIKit
 import InputViews
 ```
-
-## Examples
-
-| Screenshot1 | Screenshot2 | Screenshot3 | Screenshot4 |
-|------------|------------|------------|----------|
-| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) | ![ItemsPicker](assets/CollectionItemsPicker.gif) |
 
 ## Usage Guide
 
