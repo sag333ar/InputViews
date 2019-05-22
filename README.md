@@ -41,13 +41,13 @@ import InputViews
 
 ## Examples
 
-| Screenshot | Screenshot |
-|------------|------------|
-| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) |
+| Screenshot1 | Screenshot2 | Screenshot3 |
+|------------|------------|------------|
+| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) |
 
 ## Usage Guide
 
-### Date Picker 
+### Date Picker (Screenshot1)
 
 ```swift
 @IBOutlet var datePicker: NoCutPasteTextField? {
@@ -68,7 +68,7 @@ import InputViews
 }
 ```
 
-### Item picker with `UIPickerView`
+### Item picker with `UIPickerView` (Screenshot2)
 
 ```swift
 @IBOutlet var itemPicker: NoCutPasteTextField? {
@@ -84,6 +84,36 @@ import InputViews
     // Setting up accessory view
     itemPicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
       itemPicker.resignFirstResponder()
+    })
+  }
+}
+```
+
+### Items picker with `UITableView` (Screenshot3)
+
+```swift
+@IBOutlet var itemsFromTablePicker: NoCutPasteTextField? {
+  didSet {
+    guard let itemsFromTablePicker = itemsFromTablePicker else { return }
+    let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
+    var selected: [String] = []
+    itemsFromTablePicker.inputView = TableInputView.create(items: { () -> [Any] in
+      return array
+    }, didSelect: { (anyObj) in
+      guard let string = anyObj as? String else { return }
+      if let index = selected.firstIndex(of: string) { selected.remove(at: index) }
+      else { selected.append(string) }
+      itemsFromTablePicker.text = selected.joined(separator: ", ")
+    }, text: { (anyObject) -> String in
+      return anyObject as? String ?? ""
+    }, contains: { (anyObj) -> Bool in
+      guard let string = anyObj as? String, let _ = selected.firstIndex(of: string)
+        else { return false }
+      return true
+    })
+    // Setting up accessory view
+    itemsFromTablePicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      itemsFromTablePicker.resignFirstResponder()
     })
   }
 }

@@ -18,14 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date picker" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-aR-XIi" customClass="NoCutPasteTextField" customModule="InputViews">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick a date &amp; / time using Date Picker" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-aR-XIi" customClass="NoCutPasteTextField" customModule="InputViews">
                                 <rect key="frame" x="20" y="64" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item picker" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="syc-Jl-ZOH" customClass="NoCutPasteTextField" customModule="InputViews">
-                                <rect key="frame" x="20" y="114" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick item using PickerView (Combo box)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="syc-Jl-ZOH" customClass="NoCutPasteTextField" customModule="InputViews">
+                                <rect key="frame" x="20" y="102" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick items using TableView" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywD-C2-OgI" customClass="NoCutPasteTextField" customModule="InputViews">
+                                <rect key="frame" x="20" y="140" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -34,17 +40,21 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="syc-Jl-ZOH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Ya-ft-Igh"/>
+                            <constraint firstItem="ywD-C2-OgI" firstAttribute="top" secondItem="syc-Jl-ZOH" secondAttribute="bottom" constant="8" id="Je8-WH-bjh"/>
+                            <constraint firstItem="ywD-C2-OgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KNV-FK-CW0"/>
                             <constraint firstItem="ufy-aR-XIi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xtg-SD-D41"/>
-                            <constraint firstItem="syc-Jl-ZOH" firstAttribute="top" secondItem="ufy-aR-XIi" secondAttribute="bottom" constant="20" id="Zcz-6A-6da"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syc-Jl-ZOH" secondAttribute="trailing" constant="20" id="baX-vy-Ap9"/>
                             <constraint firstItem="ufy-aR-XIi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bqV-9M-HoT"/>
+                            <constraint firstItem="syc-Jl-ZOH" firstAttribute="top" secondItem="ufy-aR-XIi" secondAttribute="bottom" constant="8" id="cEW-7o-NFP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ufy-aR-XIi" secondAttribute="trailing" constant="20" id="cXv-m6-UMd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ywD-C2-OgI" secondAttribute="trailing" constant="20" id="vRj-9z-epy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="ufy-aR-XIi" id="UG8-CD-nPr"/>
                         <outlet property="itemPicker" destination="syc-Jl-ZOH" id="7w7-FQ-MDT"/>
+                        <outlet property="itemsFromTablePicker" destination="ywD-C2-OgI" id="1sS-Ro-NG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
