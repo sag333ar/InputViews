@@ -39,12 +39,15 @@ import UIKit
 import InputViews
 ```
 
-## Usage Examples
+## Examples
 
+| Screenshot | Screenshot |
+|------------|------------|
+| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) |
+
+## Usage Guide
 
 ### Date Picker 
-
-![DatePicker](assets/DatePicker.gif)
 
 ```swift
 @IBOutlet var datePicker: NoCutPasteTextField? {
@@ -66,8 +69,6 @@ import InputViews
 ```
 
 ### Item picker with `UIPickerView`
-
-![ItemPicker](assets/ItemPicker.gif)
 
 ```swift
 @IBOutlet var itemPicker: NoCutPasteTextField? {
