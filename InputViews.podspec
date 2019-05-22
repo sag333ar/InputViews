@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   Input views for UITextField show PickerView, TableView, Collection, instead of default keyboard
                    DESC
 
-  # spec.homepage     = "http://EXAMPLE/InputViews"
+  spec.homepage     = "https://github.com/sag333ar/InputViews"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -64,8 +64,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios
+  spec.platform     = :ios, "10.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -96,6 +96,7 @@ Pod::Spec.new do |spec|
 
   # spec.public_header_files = "Classes/**/*.h"
 
+  spec.swift_version = "5.0"
   spec.subspec 'AccessoryView' do |subspec|
     subspec.source_files = 'InputViews/AccessoryView/**/*.{swift}'
   end
