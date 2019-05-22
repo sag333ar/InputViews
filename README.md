@@ -1,2 +1,2 @@
 # InputViews
-Input views for UITextField.how PickerView, TableView, Collection, instead of default keyboard for
+Input views for UITextField show PickerView, TableView, Collection, instead of default keyboard
