@@ -1,8 +1,6 @@
 ![InputViews Title](assets/inputViews.png)
 
-## Examples
-
-| Screenshot1 | Screenshot2 | Screenshot3 | Screenshot4 |
+| Example1 | Example2 | Example3 | Example4 |
 |------------|------------|------------|----------|
 | ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) | ![ItemsPicker](assets/CollectionItemsPicker.gif) |
 
@@ -49,7 +47,7 @@ import InputViews
 
 ## Usage Guide
 
-### Date Picker (Screenshot1)
+### Date Picker (Example1)
 
 ```swift
 @IBOutlet var datePicker: NoCutPasteTextField? {
@@ -70,7 +68,7 @@ import InputViews
 }
 ```
 
-### Item picker with `UIPickerView` (Screenshot2)
+### Item picker with `UIPickerView` (Example2)
 
 ```swift
 @IBOutlet var itemPicker: NoCutPasteTextField? {
@@ -91,7 +89,7 @@ import InputViews
 }
 ```
 
-### Items picker with `UITableView` (Screenshot3)
+### Items picker with `UITableView` (Example3)
 
 ```swift
 @IBOutlet var itemsFromTablePicker: NoCutPasteTextField? {
@@ -121,7 +119,7 @@ import InputViews
 }
 ```
 
-### Items picker with `UICollectionView` (Screenshot4)
+### Items picker with `UICollectionView` (Example4)
 
 ```swift
 @IBOutlet var itemsFromCollectionView: NoCutPasteTextField? {
