@@ -2,8 +2,9 @@
 
 > Input views for UITextField show PickerView, TableView, Collection, instead of default keyboard
 
-[![Swift Version][swift-image]][swift-url]
-[![License][license-image]][license-url]
+![Pod](https://cocoapod-badges.herokuapp.com/v/InputViews/badge.png)
+![Platform](https://cocoapod-badges.herokuapp.com/p/InputViews/badge.png)
+![License](https://cocoapod-badges.herokuapp.com/l/InputViews/badge.png)
 
 It helps you convert ordinary `UITextfield` to item picker of multiple style.
 
@@ -47,20 +48,20 @@ import InputViews
 
 ```swift
 @IBOutlet var datePicker: NoCutPasteTextField? {
-	didSet {
-		guard let datePicker = datePicker else { return }
-		// Setting up input view
-		datePicker.inputView = DatePickerInputView.create(
-			mode: .dateAndTime, didSelect: { (date) in
-				let dateFormatter = DateFormatter()
-				dateFormatter.dateFormat = "dd-MMM-yyyy hh:mm a"
-				datePicker.text = dateFormatter.string(from: date)
-		})
-		// Setting up accessory view
-		datePicker.inputAccessoryView = AccessoryView.create("Select Date", doneTapped: {
-			datePicker.resignFirstResponder()
-		})
-	}
+  didSet {
+    guard let datePicker = datePicker else { return }
+    // Setting up input view
+    datePicker.inputView = DatePickerInputView.create(
+      mode: .dateAndTime, didSelect: { (date) in
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-yyyy hh:mm a"
+        datePicker.text = dateFormatter.string(from: date)
+    })
+    // Setting up accessory view
+    datePicker.inputAccessoryView = AccessoryView.create("Select Date", doneTapped: {
+      datePicker.resignFirstResponder()
+    })
+  }
 }
 ```
 
@@ -70,19 +71,19 @@ import InputViews
 
 ```swift
 @IBOutlet var itemPicker: NoCutPasteTextField? {
-	didSet {
-		guard let itemPicker = itemPicker else { return }
-		// Setting up input view
-		let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
-		itemPicker.inputView = PickerInputView.create(didSelect: { (index) in
-			itemPicker.text = array[index]
-		}, items: { () -> [String] in
-			return array
-		})
-		// Setting up accessory view
-		itemPicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
-			itemPicker.resignFirstResponder()
-		})
-	}
+  didSet {
+    guard let itemPicker = itemPicker else { return }
+    // Setting up input view
+    let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
+    itemPicker.inputView = PickerInputView.create(didSelect: { (index) in
+      itemPicker.text = array[index]
+    }, items: { () -> [String] in
+      return array
+    })
+    // Setting up accessory view
+    itemPicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      itemPicker.resignFirstResponder()
+    })
+  }
 }
 ```
