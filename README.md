@@ -41,9 +41,9 @@ import InputViews
 
 ## Examples
 
-| Screenshot1 | Screenshot2 | Screenshot3 |
-|------------|------------|------------|
-| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) |
+| Screenshot1 | Screenshot2 | Screenshot3 | Screenshot4 |
+|------------|------------|------------|----------|
+| ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) | ![ItemsPicker](assets/CollectionItemsPicker.gif) |
 
 ## Usage Guide
 
