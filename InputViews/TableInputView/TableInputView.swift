@@ -1,6 +1,6 @@
 import UIKit
 
-class TableInputView: UIView {
+public class TableInputView: UIView {
 	static let cellIdentifier = "Cell"
 	let tableView: UITableView = {
 		let tableView = UITableView()
@@ -12,17 +12,17 @@ class TableInputView: UIView {
 	var text: ((Any) -> String) = { _ in return "" }
 	var contains: ((Any) -> Bool) = {_ in return false }
 
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		make()
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		make()
 	}
 
-	override func didMoveToWindow() {
+	public override func didMoveToWindow() {
 		super.didMoveToWindow()
 		tableView.frame = bounds
 		tableView.reloadData()
@@ -41,7 +41,7 @@ class TableInputView: UIView {
 		tableView.delegate = self
 	}
 
-	static func create(
+	public static func create(
 		items: @escaping (() -> [Any]) = { return [] },
 		didSelect: ((Any) -> Void)? = nil,
 		text: @escaping ((Any) -> String) = { _ in return "" },
@@ -57,11 +57,11 @@ class TableInputView: UIView {
 }
 
 extension TableInputView: UITableViewDataSource, UITableViewDelegate {
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items().count
 	}
 
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(
 			withIdentifier: TableInputView.cellIdentifier,
 			for: indexPath
@@ -73,7 +73,7 @@ extension TableInputView: UITableViewDataSource, UITableViewDelegate {
 		return cell
 	}
 
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let currentText = items()[indexPath.row]
 		didSelect?(currentText)

@@ -1,7 +1,7 @@
 import UIKit
 
-class NoCutPasteTextField: UITextField {
-	override func target(forAction action: Selector, withSender sender: Any?) -> Any? {
+public class NoCutPasteTextField: UITextField {
+	public override func target(forAction action: Selector, withSender sender: Any?) -> Any? {
 		if action == #selector(UIResponderStandardEditActions.paste(_:))
 			||
 			action == #selector(UIResponderStandardEditActions.cut(_:)) {

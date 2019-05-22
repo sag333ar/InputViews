@@ -1,5 +1,5 @@
 import UIKit
-class AccessoryView: UIView {
+public class AccessoryView: UIView {
 	let toolBar: UIToolbar = {
 		let toolBar = UIToolbar()
 		return toolBar
@@ -20,17 +20,17 @@ class AccessoryView: UIView {
 	var addTapped: (() -> Void)?
 	var shouldShowAdd: (() -> Bool) = { return false }
 
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		make()
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		make()
 	}
 
-	override func didMoveToWindow() {
+	public override func didMoveToWindow() {
 		super.didMoveToWindow()
 		toolBar.frame = bounds
 		let flexi1 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -54,7 +54,7 @@ class AccessoryView: UIView {
 			])
 	}
 
-	static func create(
+	public static func create(
 		_ title: String = "",
 		doneTapped: (() -> Void)? = nil,
 		addTapped: (() -> Void)? = nil,

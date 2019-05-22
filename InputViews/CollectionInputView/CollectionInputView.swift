@@ -1,7 +1,7 @@
 import UIKit
 
-class CollectionInputView: UIView {
-	static let cellIdentifier = "Cell"
+public class CollectionInputView: UIView {
+	public static let cellIdentifier = "Cell"
 	let collectionView: UICollectionView = {
 		let flowLayout = UICollectionViewFlowLayout()
 		flowLayout.minimumLineSpacing = 5
@@ -18,17 +18,17 @@ class CollectionInputView: UIView {
 	var text: ((Any) -> String) = { _ in return "" }
 	var contains: ((Any) -> Bool) = {_ in return false }
 
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		make()
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		make()
 	}
 
-	override func didMoveToWindow() {
+	public override func didMoveToWindow() {
 		super.didMoveToWindow()
 		collectionView.frame = bounds
 		collectionView.reloadData()
@@ -47,7 +47,7 @@ class CollectionInputView: UIView {
 		collectionView.delegate = self
 	}
 
-	static func create(
+	public static func create(
 		items: @escaping (() -> [Any]) = { return [] },
 		didSelect: ((Any) -> Void)? = nil,
 		text: @escaping ((Any) -> String) = { _ in return "" },
@@ -64,13 +64,13 @@ class CollectionInputView: UIView {
 }
 
 extension CollectionInputView: UICollectionViewDataSource, UICollectionViewDelegate {
-	func collectionView(
+	public func collectionView(
 		_ collectionView: UICollectionView,
 		numberOfItemsInSection section: Int) -> Int {
 		return items().count
 	}
 
-	func collectionView(
+	public func collectionView(
 		_ collectionView: UICollectionView,
 		cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(
@@ -90,14 +90,14 @@ extension CollectionInputView: UICollectionViewDataSource, UICollectionViewDeleg
 		return cell
 	}
 
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+	public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		didSelect?(items()[indexPath.row])
 		collectionView.reloadData()
 	}
 }
 
 extension CollectionInputView: UICollectionViewDelegateFlowLayout {
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+	public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		var size = (text(items()[indexPath.row]) as NSString).size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)])
 		size.width += 15
 		size.height = 40

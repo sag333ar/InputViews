@@ -1,6 +1,6 @@
 import UIKit
 
-class PickerInputView: UIView {
+public class PickerInputView: UIView {
 	var selectedIndex = 0
 	var didSelect: ((Int) -> Void)?
 	var items: (() -> [String]) = { return [] }
@@ -10,17 +10,17 @@ class PickerInputView: UIView {
 		return pickerView
 	}()
 
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		make()
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		make()
 	}
 
-	override func didMoveToWindow() {
+	public override func didMoveToWindow() {
 		super.didMoveToWindow()
 		pickerView.frame = bounds
 		pickerView.reloadAllComponents()
@@ -38,7 +38,7 @@ class PickerInputView: UIView {
 		pickerView.delegate = self
 	}
 
-	static func create(
+	public static func create(
 		didSelect: ((Int) -> Void)? = nil,
 		items: @escaping (() -> [String]) = { return [] },
 		owner: AnyObject
@@ -51,21 +51,21 @@ class PickerInputView: UIView {
 }
 
 extension PickerInputView: UIPickerViewDataSource {
-	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+	public func numberOfComponents(in pickerView: UIPickerView) -> Int {
 		return 1
 	}
 
-	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+	public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		return items().count
 	}
 }
 
 extension PickerInputView: UIPickerViewDelegate {
-	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+	public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		return items()[row]
 	}
 
-	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+	public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		selectedIndex = row
 		didSelect?(row)
 	}

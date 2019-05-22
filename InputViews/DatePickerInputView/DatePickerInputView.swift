@@ -1,23 +1,23 @@
 import UIKit
 
-class DatePickerInputView: UIView {
+public class DatePickerInputView: UIView {
 	var didSelect: ((Date) -> Void)?
 	let pickerView: UIDatePicker = {
 		let pickerView = UIDatePicker()
 		return pickerView
 	}()
 
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 		make()
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		make()
 	}
 
-	override func didMoveToWindow() {
+	public override func didMoveToWindow() {
 		super.didMoveToWindow()
 		pickerView.frame = bounds
 		pickerView.date = Date()
@@ -34,7 +34,7 @@ class DatePickerInputView: UIView {
 		pickerView.backgroundColor = .white
 	}
 
-	static func create(
+	public static func create(
 		mode: UIDatePicker.Mode,
 		didSelect: ((Date) -> Void)? = nil,
 		owner: AnyObject

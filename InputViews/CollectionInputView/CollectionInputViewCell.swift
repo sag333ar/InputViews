@@ -1,6 +1,6 @@
 import UIKit
 
-class CollectionInputViewCell: UICollectionViewCell {
+public class CollectionInputViewCell: UICollectionViewCell {
 	var titleLabel: UILabel = {
 		let titleLabel = UILabel()
 		titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -39,12 +39,12 @@ class CollectionInputViewCell: UICollectionViewCell {
 			])
 	}
 
-	override func layoutIfNeeded() {
+	public override func layoutIfNeeded() {
 		super.layoutIfNeeded()
 		backgroundLabel.layer.cornerRadius = (backgroundLabel.frame.size.height / 2.0) - 2.0
 	}
 
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		make()
 	}
