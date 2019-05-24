@@ -1,7 +1,7 @@
 ![InputViews Title](assets/inputViews.png)
 
 | Example1 | Example2 | Example3 |
-|------------|------------|------------|----------|
+|------------|------------|------------|
 | ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) |
 | Example4 | -- | -- |
 | ![ItemsPicker](assets/CollectionItemsPicker.gif) | -- | -- |
