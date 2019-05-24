@@ -85,6 +85,7 @@ public class CollectionInputView<T>: UIView, UICollectionViewDataSource, UIColle
     if let kcvc = cell as? CollectionInputViewCell {
       kcvc.layoutIfNeeded()
       kcvc.titleLabel.text = text(items()[indexPath.row])
+      kcvc.titleLabel.font = font
       if contains(items()[indexPath.row]) {
         kcvc.backgroundLabel.backgroundColor = selectionColor
       } else {

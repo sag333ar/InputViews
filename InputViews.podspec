@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "InputViews"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "Custom input views for UIKeyboard"
 
   # This description is used to generate tags and improve search results.
@@ -101,7 +101,11 @@ Pod::Spec.new do |spec|
     subspec.source_files = 'InputViews/AccessoryView/**/*.{swift}'
   end
   spec.subspec 'CollectionInputView' do |subspec|
-    subspec.source_files = 'InputViews/CollectionInputView/**/*.{swift}'
+    subspec.source_files = 'InputViews/CollectionInputView/*.{swift}'
+    subspec.subspec 'PickFontAwesomeIconView' do |subsubspec|
+      subsubspec.resources = 'InputViews/CollectionInputView/PickFontAwesomeIconView/*.{otf}'
+      subsubspec.source_files = 'InputViews/CollectionInputView/PickFontAwesomeIconView/*.{swift}'
+    end
   end
   spec.subspec 'DatePickerInputView' do |subspec|
     subspec.source_files = 'InputViews/DatePickerInputView/**/*.{swift}'

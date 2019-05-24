@@ -94,6 +94,19 @@ class ViewController: UIViewController {
     }
   }
 
+  @IBOutlet var pickFontAwesomeIconView: NoCutPasteTextField? {
+    didSet {
+      guard let pickFontAwesomeIconView = pickFontAwesomeIconView else { return }
+      pickFontAwesomeIconView.inputView = PickFontAwesomeIconView(didSelect: { (icon) in
+        print("Icon is \(icon)")
+      }, height: 250)
+      // Setting up accessory view
+      pickFontAwesomeIconView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+        pickFontAwesomeIconView.resignFirstResponder()
+      })
+    }
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
   }
