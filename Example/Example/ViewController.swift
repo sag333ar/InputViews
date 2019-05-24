@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     didSet {
       guard let datePicker = datePicker else { return }
       // Setting up input view
-      datePicker.inputView = DatePickerInputView.create(
+      datePicker.inputView = DatePickerInputView(
         mode: .dateAndTime, didSelect: { (date) in
           let dateFormatter = DateFormatter()
           dateFormatter.dateFormat = "dd-MMM-yyyy hh:mm a"
@@ -32,11 +32,11 @@ class ViewController: UIViewController {
       guard let itemPicker = itemPicker else { return }
       let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
       // Setting up input view
-      itemPicker.inputView = PickerInputView.create(didSelect: { (index) in
-        itemPicker.text = array[index]
-      }, items: { () -> [String] in
-        return array
-      })
+      let inputView = PickerInputView<String>(height: 250)
+      inputView.items = { return array }
+      inputView.didSelectAtIndex = { index in itemPicker.text = array[index] }
+      inputView.text = { string in return string }
+      itemPicker.inputView = inputView
       // Setting up accessory view
       itemPicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
         itemPicker.resignFirstResponder()
@@ -49,23 +49,19 @@ class ViewController: UIViewController {
       guard let itemsFromTablePicker = itemsFromTablePicker else { return }
       let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
       var selected: [String] = []
-      itemsFromTablePicker.inputView = TableInputView.create(items: { () -> [Any] in
-        return array
-      }, didSelect: { (anyObj) in
-        guard let string = anyObj as? String else { return }
+      let inputView = TableInputView<String>.init(height: 250)
+      inputView.items = { return array }
+      inputView.didSelect = { string in
         if let index = selected.firstIndex(of: string) {
           selected.remove(at: index)
         } else {
           selected.append(string)
         }
         itemsFromTablePicker.text = selected.joined(separator: ", ")
-      }, text: { (anyObject) -> String in
-        return anyObject as? String ?? ""
-      }, contains: { (anyObj) -> Bool in
-        guard let string = anyObj as? String, selected.firstIndex(of: string) != nil
-          else { return false }
-        return true
-      })
+      }
+      inputView.contains = { string in return selected.firstIndex(of: string) != nil }
+      inputView.text = { string in return string }
+      itemsFromTablePicker.inputView = inputView
       // Setting up accessory view
       itemsFromTablePicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
         itemsFromTablePicker.resignFirstResponder()
@@ -78,23 +74,19 @@ class ViewController: UIViewController {
       guard let itemsFromCollectionView = itemsFromCollectionView else { return }
       let array = ["First item", "Second item", "Third item", "Fourth item", "Fifth", "and sixth"]
       var selected: [String] = []
-      itemsFromCollectionView.inputView = CollectionInputView.create(items: { () -> [Any] in
-        return array
-      }, didSelect: { (anyObj) in
-        guard let string = anyObj as? String else { return }
+      let inputView = CollectionInputView<String>(height: 250)
+      inputView.items = { return array }
+      inputView.didSelect = { string in
         if let index = selected.firstIndex(of: string) {
           selected.remove(at: index)
         } else {
           selected.append(string)
         }
         itemsFromCollectionView.text = selected.joined(separator: ", ")
-      }, text: { (anyObject) -> String in
-        return anyObject as? String ?? ""
-      }, contains: { (anyObj) -> Bool in
-        guard let string = anyObj as? String, selected.firstIndex(of: string) != nil
-          else { return false }
-        return true
-      })
+      }
+      inputView.text = { string in return string }
+      inputView.contains = { string in return selected.firstIndex(of: string) != nil }
+      itemsFromCollectionView.inputView = inputView
       // Setting up accessory view
       itemsFromCollectionView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
         itemsFromCollectionView.resignFirstResponder()

@@ -1,23 +1,19 @@
 import UIKit
 
-public class PickerInputView: UIView {
+public class PickerInputView<T>: UIView, UIPickerViewDataSource, UIPickerViewDelegate {
   var selectedIndex = 0
-  var didSelect: ((Int) -> Void)?
-  var items: (() -> [String]) = { return [] }
+  public var didSelectAtIndex: ((Int) -> Void)?
+  public var items: (() -> [T]) = { return [] }
+  public var text: ((T) -> String) = { _ in return "" }
 
   let pickerView: UIPickerView = {
     let pickerView = UIPickerView()
+    pickerView.translatesAutoresizingMaskIntoConstraints = false
     return pickerView
   }()
 
-  public override init(frame: CGRect) {
-    super.init(frame: frame)
-    make()
-  }
-
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    make()
   }
 
   public override func didMoveToWindow() {
@@ -28,7 +24,17 @@ public class PickerInputView: UIView {
     pickerView.reloadAllComponents()
   }
 
-  private func make() {
+  public required init(
+    items: @escaping (() -> [T]) = { return [] },
+    text: @escaping ((T) -> String) = { _ in return "" },
+    didSelectAtIndex: ((Int) -> Void)? = nil,
+    height: CGFloat
+    ) {
+    super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height))
+    self.didSelectAtIndex = didSelectAtIndex
+    self.items = items
+    self.text = text
+    translatesAutoresizingMaskIntoConstraints = false
     addSubview(pickerView)
     NSLayoutConstraint.activate([
       pickerView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -40,18 +46,6 @@ public class PickerInputView: UIView {
     pickerView.delegate = self
   }
 
-  public static func create(
-    didSelect: ((Int) -> Void)? = nil,
-    items: @escaping (() -> [String]) = { return [] }
-    ) -> PickerInputView {
-    let view = PickerInputView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250))
-    view.didSelect = didSelect
-    view.items = items
-    return view
-  }
-}
-
-extension PickerInputView: UIPickerViewDataSource {
   public func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
@@ -59,15 +53,13 @@ extension PickerInputView: UIPickerViewDataSource {
   public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     return items().count
   }
-}
 
-extension PickerInputView: UIPickerViewDelegate {
   public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    return items()[row]
+    return text(items()[row])
   }
 
   public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     selectedIndex = row
-    didSelect?(row)
+    didSelectAtIndex?(row)
   }
 }
