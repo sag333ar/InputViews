@@ -5,7 +5,7 @@
 | ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) |
 |------------|------------|------------|
 | Example4 | Example5 | -- |
-| ![ItemsPicker](assets/CollectionItemsPicker.gif) | ![IconPicker](assets/PickFontAwesomeIcon.png) | -- |
+| ![ItemsPicker](assets/CollectionItemsPicker.gif) | ![IconPicker](assets/Pick_Font_Awesome_Solid_Icon.gif) | -- |
 
 # InputViews
 
@@ -19,11 +19,12 @@ It helps you convert ordinary `UITextfield` to item picker of multiple style.
 
 ## Features
 
-- [x] Date Picker
-- [x] Item Picker using `UIPickerView`
-- [x] Item Picker using `UITableView`
-- [x] Item Picker using `UICollectionView`
-- [x] Quick `AccessoryView` with done button
+- [x] Date Picker (Example1)
+- [x] Item Picker using `UIPickerView` (Example2)
+- [x] Item Picker using `UITableView` (Example3)
+- [x] Item Picker using `UICollectionView` (Example4)
+- [x] Quick `AccessoryView` with done button (All examples with done button toolbar)
+- [x] Font Awesome Icon Picker (Example5)
 
 ## Requirements
 
