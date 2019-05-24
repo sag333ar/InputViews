@@ -104,7 +104,7 @@ Pod::Spec.new do |spec|
     subspec.source_files = 'InputViews/CollectionInputView/*.{swift}'
     subspec.subspec 'PickFontAwesomeIconView' do |subsubspec|
       subsubspec.resources = 'InputViews/CollectionInputView/PickFontAwesomeIconView/*.{otf}'
-      subsubspec.source_files = 'InputViews/CollectionInputView/PickFontAwesomeIconView/*.{swift}'
+      subsubspec.source_files = 'InputViews/CollectionInputView/**/*.{swift}'
     end
   end
   spec.subspec 'DatePickerInputView' do |subspec|

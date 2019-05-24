@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		00CC663BCE712251C6462DD047D5EC04 /* InputViews-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CD72C338969D737F5B371CAD1D87704 /* InputViews-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		00F22217184971AD071C719C0AE4C5AE /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E34284D267AC47D521DDAE6713236E0 /* UIFont+Custom.swift */; };
-		0A82D6E66A75DCF6E45A4DACA126D61A /* FontAwesome5FreeSolid900.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD3924DBE49BADF698C9283DC388A599 /* FontAwesome5FreeSolid900.otf */; };
-		18C793B95B4C4A528B73CCCC504A4EFB /* PickFontAwesomeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51565BBF64F92CAF3759780CB4CA3282 /* PickFontAwesomeIconView.swift */; };
-		26DF7D51487C28F481C89949B3CD48B4 /* DatePickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164F8ECE7399247A3680F112903C47F0 /* DatePickerInputView.swift */; };
-		408CB03E660B06BA558E0D767C594177 /* InputViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 061A0A6FB190EAE0263CF80A97262D93 /* InputViews-dummy.m */; };
-		41E7C1E1FB0F5EC302F8495DF699EDA5 /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F2CA6BD1EFA03653802C57F760AE6 /* AccessoryView.swift */; };
-		5B7C24D86CEAE6881429AA1C185F15F3 /* NoCutPasteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90201D7BBBBAE9B007D70C2D092779 /* NoCutPasteField.swift */; };
+		0A82D6E66A75DCF6E45A4DACA126D61A /* FontAwesome5FreeSolid900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2EBC356EE1B6EF31EF07E06DC1950FD0 /* FontAwesome5FreeSolid900.otf */; };
+		2795F9C728749682D01A2E84B00A9C4A /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630F2CA6BD1EFA03653802C57F760AE6 /* AccessoryView.swift */; };
+		378A6A6F9E760B64B192F4D9102C9888 /* DatePickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164F8ECE7399247A3680F112903C47F0 /* DatePickerInputView.swift */; };
 		5BFB4B3C277E56E0F1ED7F9EEBD19F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		86311FEAD64C661CEB45DFC856AA8C6B /* PickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730694C119844976C037CC8BB833EA73 /* PickerInputView.swift */; };
-		8C73064C08B58D06AA30E3060ADF9453 /* CollectionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2394AB4EEAEDFFB493B88EEAA576C2F /* CollectionInputView.swift */; };
-		A7D772CD6AF0FE280C932063983D1764 /* TableInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6367D7B8591C22F1E5187EAEE3727EC /* TableInputView.swift */; };
+		64C3961F3C4BC0B921A3E66363E76529 /* InputViews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 061A0A6FB190EAE0263CF80A97262D93 /* InputViews-dummy.m */; };
+		70FBE2C88A4F806E3A0820DB4DE70AF5 /* TableInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6367D7B8591C22F1E5187EAEE3727EC /* TableInputView.swift */; };
 		B265275D6566B8C43FDC68133DC287C1 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2D64ED451E41E9B5DD8219F3484930C /* NoCutPasteField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B90201D7BBBBAE9B007D70C2D092779 /* NoCutPasteField.swift */; };
 		CFE315C452D14E073F43DBA7E86942AC /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */; };
 		E18DB27AFDE04D014D7EE214BA0988B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F6F6644B9F8A85CA236749944E4D3A8B /* CollectionInputViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98713F11A0B2BE95871B5B170F56332 /* CollectionInputViewCell.swift */; };
+		E4E0FFA576FC5590E0806A37DEF59D57 /* PickerInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730694C119844976C037CC8BB833EA73 /* PickerInputView.swift */; };
+		E5A4C2975C8A598350FAC5668237AB96 /* CollectionInputViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4875B540019F62E68C185802F6C4698E /* CollectionInputViewCell.swift */; };
+		E6B27278902087059B1D4DC843007FC1 /* CollectionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BD62A672F3E5E66BEED8DDCFE01A68 /* CollectionInputView.swift */; };
+		E9C3178A02356F624E17F5F585C05A6D /* PickFontAwesomeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBFB75C13ED722E4EFB3C83B9C0443 /* PickFontAwesomeIconView.swift */; };
+		FD4E6C5B79A66860BB00C89387A9C480 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC09C488D096CC48C4D8E32BA38C5430 /* UIFont+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,35 +39,35 @@
 		061A0A6FB190EAE0263CF80A97262D93 /* InputViews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InputViews-dummy.m"; sourceTree = "<group>"; };
 		164F8ECE7399247A3680F112903C47F0 /* DatePickerInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerInputView.swift; path = InputViews/DatePickerInputView/DatePickerInputView.swift; sourceTree = "<group>"; };
 		243410B9535472556EA4BB6DBC133A0D /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		2EBC356EE1B6EF31EF07E06DC1950FD0 /* FontAwesome5FreeSolid900.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome5FreeSolid900.otf; path = InputViews/CollectionInputView/PickFontAwesomeIconView/FontAwesome5FreeSolid900.otf; sourceTree = "<group>"; };
+		30BBFB75C13ED722E4EFB3C83B9C0443 /* PickFontAwesomeIconView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PickFontAwesomeIconView.swift; sourceTree = "<group>"; };
 		31C1D37707DFAA5E6A164BCC07834264 /* Pods-Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		35C305D3797C284E6F5BAA1D3E6F9BF8 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		3CD72C338969D737F5B371CAD1D87704 /* InputViews-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InputViews-umbrella.h"; sourceTree = "<group>"; };
 		439A8F4CB5FBF59D6CBA55E205E99AE0 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		441854E35F81731E63E53DC7E4EEAD9D /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4875B540019F62E68C185802F6C4698E /* CollectionInputViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionInputViewCell.swift; path = InputViews/CollectionInputView/CollectionInputViewCell.swift; sourceTree = "<group>"; };
 		4B90201D7BBBBAE9B007D70C2D092779 /* NoCutPasteField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoCutPasteField.swift; path = InputViews/NoCutPasteField/NoCutPasteField.swift; sourceTree = "<group>"; };
-		51565BBF64F92CAF3759780CB4CA3282 /* PickFontAwesomeIconView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickFontAwesomeIconView.swift; path = InputViews/CollectionInputView/PickFontAwesomeIconView/PickFontAwesomeIconView.swift; sourceTree = "<group>"; };
-		5E34284D267AC47D521DDAE6713236E0 /* UIFont+Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Custom.swift"; path = "InputViews/CollectionInputView/PickFontAwesomeIconView/UIFont+Custom.swift"; sourceTree = "<group>"; };
 		630F2CA6BD1EFA03653802C57F760AE6 /* AccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessoryView.swift; path = InputViews/AccessoryView/AccessoryView.swift; sourceTree = "<group>"; };
 		730694C119844976C037CC8BB833EA73 /* PickerInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PickerInputView.swift; path = InputViews/PickerInputView/PickerInputView.swift; sourceTree = "<group>"; };
 		7825A90E082A1582EB16256B0E722B3F /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		7A057CE8F57B61A98E8D39FC54CE5552 /* InputViews.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = InputViews.modulemap; sourceTree = "<group>"; };
 		7AEB1986E4278869E8A9600032BF8237 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		89BD62A672F3E5E66BEED8DDCFE01A68 /* CollectionInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionInputView.swift; path = InputViews/CollectionInputView/CollectionInputView.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A10622807CD4AC662D57A6251C5B9E38 /* InputViews.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InputViews.xcconfig; sourceTree = "<group>"; };
 		A6367D7B8591C22F1E5187EAEE3727EC /* TableInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableInputView.swift; path = InputViews/TableInputView/TableInputView.swift; sourceTree = "<group>"; };
-		AD3924DBE49BADF698C9283DC388A599 /* FontAwesome5FreeSolid900.otf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome5FreeSolid900.otf; path = InputViews/CollectionInputView/PickFontAwesomeIconView/FontAwesome5FreeSolid900.otf; sourceTree = "<group>"; };
 		AFECBC24E09D0D25F822C27BD944AFD4 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
 		B45138496B85A072654D1D0F8EBBEDE5 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B91BE786BA5AD80BD7420CB2E39167D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		BE5FA858F33AA3E4D57825FFF4ED11E4 /* InputViews-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InputViews-prefix.pch"; sourceTree = "<group>"; };
-		C2394AB4EEAEDFFB493B88EEAA576C2F /* CollectionInputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionInputView.swift; path = InputViews/CollectionInputView/CollectionInputView.swift; sourceTree = "<group>"; };
 		D0551DACA97AAD56D1CAC0AC5F7A229D /* InputViews-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "InputViews-Info.plist"; sourceTree = "<group>"; };
 		D6D7C498FA339E02BD53ECB8916CEA8E /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		E455B4239EF220F23E97B2098AC2D5B0 /* InputViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = InputViews.framework; path = InputViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA21B344259B58996DB73382B1B1521F /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F09AE16DE909CBE6C3DD44D361DEB5DF /* InputViews.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = InputViews.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F98713F11A0B2BE95871B5B170F56332 /* CollectionInputViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionInputViewCell.swift; path = InputViews/CollectionInputView/CollectionInputViewCell.swift; sourceTree = "<group>"; };
+		FC09C488D096CC48C4D8E32BA38C5430 /* UIFont+Custom.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +98,16 @@
 			name = PickerInputView;
 			sourceTree = "<group>";
 		};
+		13A34E7AB150A23A5E17D3D72042B433 /* PickFontAwesomeIconView */ = {
+			isa = PBXGroup;
+			children = (
+				30BBFB75C13ED722E4EFB3C83B9C0443 /* PickFontAwesomeIconView.swift */,
+				FC09C488D096CC48C4D8E32BA38C5430 /* UIFont+Custom.swift */,
+			);
+			name = PickFontAwesomeIconView;
+			path = InputViews/CollectionInputView/PickFontAwesomeIconView;
+			sourceTree = "<group>";
+		};
 		22FE8846612E65F6DA36DEB2C99ABF62 /* NoCutPasteField */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,15 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
+		3AF802BB21C25DD43D2CE389199DE4EC /* PickFontAwesomeIconView */ = {
+			isa = PBXGroup;
+			children = (
+				13A34E7AB150A23A5E17D3D72042B433 /* PickFontAwesomeIconView */,
+				E5B6B4C94101FC56B10A338B96F54333 /* Resources */,
+			);
+			name = PickFontAwesomeIconView;
+			sourceTree = "<group>";
+		};
 		3FD7E85664813575703D77DC465DA943 /* AccessoryView */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,32 +151,14 @@
 			name = AccessoryView;
 			sourceTree = "<group>";
 		};
-		64548A077196C1418A61C99D3E054F39 /* CollectionInputView */ = {
+		582A20E532922D0B55D24AD799766637 /* CollectionInputView */ = {
 			isa = PBXGroup;
 			children = (
-				C2394AB4EEAEDFFB493B88EEAA576C2F /* CollectionInputView.swift */,
-				F98713F11A0B2BE95871B5B170F56332 /* CollectionInputViewCell.swift */,
-				6880E71CB4FABF2C038078E7B2B0DF85 /* PickFontAwesomeIconView */,
+				89BD62A672F3E5E66BEED8DDCFE01A68 /* CollectionInputView.swift */,
+				4875B540019F62E68C185802F6C4698E /* CollectionInputViewCell.swift */,
+				3AF802BB21C25DD43D2CE389199DE4EC /* PickFontAwesomeIconView */,
 			);
 			name = CollectionInputView;
-			sourceTree = "<group>";
-		};
-		6880E71CB4FABF2C038078E7B2B0DF85 /* PickFontAwesomeIconView */ = {
-			isa = PBXGroup;
-			children = (
-				51565BBF64F92CAF3759780CB4CA3282 /* PickFontAwesomeIconView.swift */,
-				5E34284D267AC47D521DDAE6713236E0 /* UIFont+Custom.swift */,
-				6CF70D73EFE450A0E41AC71B423296BF /* Resources */,
-			);
-			name = PickFontAwesomeIconView;
-			sourceTree = "<group>";
-		};
-		6CF70D73EFE450A0E41AC71B423296BF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AD3924DBE49BADF698C9283DC388A599 /* FontAwesome5FreeSolid900.otf */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		71641643ABE3DDB7AF95306A61639C78 /* TableInputView */ = {
@@ -197,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				3FD7E85664813575703D77DC465DA943 /* AccessoryView */,
-				64548A077196C1418A61C99D3E054F39 /* CollectionInputView */,
+				582A20E532922D0B55D24AD799766637 /* CollectionInputView */,
 				2A1B7A40A386D1F1197212D86CDC7DB6 /* DatePickerInputView */,
 				22FE8846612E65F6DA36DEB2C99ABF62 /* NoCutPasteField */,
 				0727626D8DCB3342CC1C2F9A6E7B68F2 /* PickerInputView */,
@@ -251,6 +252,14 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5B6B4C94101FC56B10A338B96F54333 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2EBC356EE1B6EF31EF07E06DC1950FD0 /* FontAwesome5FreeSolid900.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		F3B03D7E20F9B6190695C3E4050D1B43 /* Support Files */ = {
@@ -313,7 +322,7 @@
 			buildConfigurationList = ABEDAFA26D91F6AC4EA4141711FE4B25 /* Build configuration list for PBXNativeTarget "InputViews" */;
 			buildPhases = (
 				60C10438112382C05A7D78DD93DD6C4A /* Headers */,
-				578A6975256EAD8E93B545B29E631BAA /* Sources */,
+				7613BB8DEFFD160873EEDBE5F732B134 /* Sources */,
 				08F7707566D2518297CDC1593C87740B /* Frameworks */,
 				54C247C6DBB6F310BB3C9AA6E844AECD /* Resources */,
 			);
@@ -372,20 +381,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		578A6975256EAD8E93B545B29E631BAA /* Sources */ = {
+		7613BB8DEFFD160873EEDBE5F732B134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41E7C1E1FB0F5EC302F8495DF699EDA5 /* AccessoryView.swift in Sources */,
-				8C73064C08B58D06AA30E3060ADF9453 /* CollectionInputView.swift in Sources */,
-				F6F6644B9F8A85CA236749944E4D3A8B /* CollectionInputViewCell.swift in Sources */,
-				26DF7D51487C28F481C89949B3CD48B4 /* DatePickerInputView.swift in Sources */,
-				408CB03E660B06BA558E0D767C594177 /* InputViews-dummy.m in Sources */,
-				5B7C24D86CEAE6881429AA1C185F15F3 /* NoCutPasteField.swift in Sources */,
-				86311FEAD64C661CEB45DFC856AA8C6B /* PickerInputView.swift in Sources */,
-				18C793B95B4C4A528B73CCCC504A4EFB /* PickFontAwesomeIconView.swift in Sources */,
-				A7D772CD6AF0FE280C932063983D1764 /* TableInputView.swift in Sources */,
-				00F22217184971AD071C719C0AE4C5AE /* UIFont+Custom.swift in Sources */,
+				2795F9C728749682D01A2E84B00A9C4A /* AccessoryView.swift in Sources */,
+				E6B27278902087059B1D4DC843007FC1 /* CollectionInputView.swift in Sources */,
+				E5A4C2975C8A598350FAC5668237AB96 /* CollectionInputViewCell.swift in Sources */,
+				378A6A6F9E760B64B192F4D9102C9888 /* DatePickerInputView.swift in Sources */,
+				64C3961F3C4BC0B921A3E66363E76529 /* InputViews-dummy.m in Sources */,
+				B2D64ED451E41E9B5DD8219F3484930C /* NoCutPasteField.swift in Sources */,
+				E4E0FFA576FC5590E0806A37DEF59D57 /* PickerInputView.swift in Sources */,
+				E9C3178A02356F624E17F5F585C05A6D /* PickFontAwesomeIconView.swift in Sources */,
+				70FBE2C88A4F806E3A0820DB4DE70AF5 /* TableInputView.swift in Sources */,
+				FD4E6C5B79A66860BB00C89387A9C480 /* UIFont+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

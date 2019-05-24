@@ -1,6 +1,6 @@
 {
   "name": "InputViews",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "summary": "Custom input views for UIKeyboard",
   "description": "Input views for UITextField show PickerView, TableView, Collection, instead of default keyboard",
   "homepage": "https://github.com/sag333ar/InputViews",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/sag333ar/InputViews.git",
-    "tag": "1.0.4"
+    "tag": "1.0.5"
   },
   "swift_versions": "5.0",
   "subspecs": [
@@ -28,7 +28,7 @@
         {
           "name": "PickFontAwesomeIconView",
           "resources": "InputViews/CollectionInputView/PickFontAwesomeIconView/*.{otf}",
-          "source_files": "InputViews/CollectionInputView/PickFontAwesomeIconView/*.{swift}"
+          "source_files": "InputViews/CollectionInputView/**/*.{swift}"
         }
       ]
     },
