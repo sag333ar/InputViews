@@ -4,8 +4,8 @@
 |------------|------------|------------|
 | ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) |
 |------------|------------|------------|
-| Example4 | -- | -- |
-| ![ItemsPicker](assets/CollectionItemsPicker.gif) | -- | -- |
+| Example4 | Example5 | -- |
+| ![ItemsPicker](assets/CollectionItemsPicker.gif) | ![IconPicker](assets/PickFontAwesomeIcon.png) | -- |
 
 # InputViews
 
@@ -145,6 +145,23 @@ import InputViews
     // Setting up accessory view
     itemsFromCollectionView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
       itemsFromCollectionView.resignFirstResponder()
+    })
+  }
+}
+```
+
+### Pick Font Awesome Icon (Example5)
+
+```swift
+@IBOutlet var pickFontAwesomeIconView: NoCutPasteTextField? {
+  didSet {
+    guard let pickFontAwesomeIconView = pickFontAwesomeIconView else { return }
+    pickFontAwesomeIconView.inputView = PickFontAwesomeIconView(didSelect: { (icon) in
+      print("Icon is \(icon)")
+    }, height: 250)
+    // Setting up accessory view
+    pickFontAwesomeIconView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      pickFontAwesomeIconView.resignFirstResponder()
     })
   }
 }
