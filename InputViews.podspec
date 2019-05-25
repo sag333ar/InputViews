@@ -111,7 +111,7 @@ Pod::Spec.new do |spec|
     subspec.source_files = 'InputViews/DatePickerInputView/**/*.{swift}'
   end
   spec.subspec 'ColorPickerView' do |subspec|
-    subspec.source_files = 'InputViews/ColorPickerView/**/*.{swift}'
+    subspec.source_files = 'InputViews/ColorPickerView/**/*.{swift}', 'InputViews/CollectionInputView/CollectionInputViewCell.swift'
   end
   spec.subspec 'NoCutPasteField' do |subspec|
     subspec.source_files = 'InputViews/NoCutPasteField/**/*.{swift}'
