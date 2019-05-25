@@ -3,9 +3,8 @@
 | Example1 | Example2 | Example3 |
 |------------|------------|------------|
 | ![DatePicker](assets/DatePicker.gif) | ![ItemPicker](assets/ItemPicker.gif) | ![ItemsPicker](assets/ItemsPicker.gif) |
-|------------|------------|------------|
-| Example4 | Example5 | -- |
-| ![ItemsPicker](assets/CollectionItemsPicker.gif) | ![IconPicker](assets/Pick_Font_Awesome_Solid_Icon.gif) | -- |
+| Example4 | Example5 | Example6 |
+| ![ItemsPicker](assets/CollectionItemsPicker.gif) | ![IconPicker](assets/Pick_Font_Awesome_Solid_Icon.gif) | ![ColorPicker](assets/Pick_color.gif) |
 
 # InputViews
 
@@ -25,6 +24,7 @@ It helps you convert ordinary `UITextfield` to item picker of multiple style.
 - [x] Item Picker using `UICollectionView` (Example4)
 - [x] Quick `AccessoryView` with done button (All examples with done button toolbar)
 - [x] Font Awesome Icon Picker (Example5)
+- [x] UIColor Picker (Example6)
 
 ## Requirements
 
@@ -163,6 +163,27 @@ import InputViews
     // Setting up accessory view
     pickFontAwesomeIconView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
       pickFontAwesomeIconView.resignFirstResponder()
+    })
+  }
+}
+```
+
+### Pick UIColor (Example6)
+
+```swift
+@IBOutlet var colorPicker: NoCutPasteTextField? {
+  didSet {
+    guard let colorPicker = colorPicker else { return }
+    var selectedColor: UIColor?
+    colorPicker.inputView = ColorPickerView.init(didSelect: { (color) in
+      colorPicker.backgroundColor = color
+      selectedColor = color
+    }, contains: { (color) in
+      return color.isEqual(selectedColor)
+    }, height: 250, colorSize: 30)
+    // Setting up accessory view
+    colorPicker.inputAccessoryView = AccessoryView.create("Select Color", doneTapped: {
+      colorPicker.resignFirstResponder()
     })
   }
 }

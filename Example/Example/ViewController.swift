@@ -107,6 +107,23 @@ class ViewController: UIViewController {
     }
   }
 
+  @IBOutlet var colorPicker: NoCutPasteTextField? {
+    didSet {
+      guard let colorPicker = colorPicker else { return }
+      var selectedColor: UIColor?
+      colorPicker.inputView = ColorPickerView.init(didSelect: { (color) in
+        colorPicker.backgroundColor = color
+        selectedColor = color
+      }, contains: { (color) in
+        return color.isEqual(selectedColor)
+      }, height: 250, colorSize: 30)
+      // Setting up accessory view
+      colorPicker.inputAccessoryView = AccessoryView.create("Select Color", doneTapped: {
+        colorPicker.resignFirstResponder()
+      })
+    }
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
   }

@@ -48,18 +48,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXu-Od-4tk" customClass="NoCutPasteTextField" customModule="InputViews">
+                                <rect key="frame" x="20" y="254" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bXu-Od-4tk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Gw-Rq-Zju"/>
                             <constraint firstItem="syc-Jl-ZOH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3Ya-ft-Igh"/>
                             <constraint firstItem="Ckr-uc-UvJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3w2-Iw-SlC"/>
                             <constraint firstItem="ZWV-go-tfh" firstAttribute="top" secondItem="Ckr-uc-UvJ" secondAttribute="bottom" constant="8" id="8e7-eD-bd1"/>
                             <constraint firstItem="ZWV-go-tfh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="941-Qm-6Eb"/>
                             <constraint firstItem="ywD-C2-OgI" firstAttribute="top" secondItem="syc-Jl-ZOH" secondAttribute="bottom" constant="8" id="Je8-WH-bjh"/>
                             <constraint firstItem="ywD-C2-OgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KNV-FK-CW0"/>
+                            <constraint firstItem="bXu-Od-4tk" firstAttribute="top" secondItem="ZWV-go-tfh" secondAttribute="bottom" constant="8" id="Let-cK-yO2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ckr-uc-UvJ" secondAttribute="trailing" constant="20" id="MNd-tc-miD"/>
                             <constraint firstItem="ufy-aR-XIi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xtg-SD-D41"/>
                             <constraint firstItem="Ckr-uc-UvJ" firstAttribute="top" secondItem="ywD-C2-OgI" secondAttribute="bottom" constant="8" id="Zh2-sa-4vh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXu-Od-4tk" secondAttribute="trailing" constant="20" id="bWI-oe-aMx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syc-Jl-ZOH" secondAttribute="trailing" constant="20" id="baX-vy-Ap9"/>
                             <constraint firstItem="ufy-aR-XIi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bqV-9M-HoT"/>
                             <constraint firstItem="syc-Jl-ZOH" firstAttribute="top" secondItem="ufy-aR-XIi" secondAttribute="bottom" constant="8" id="cEW-7o-NFP"/>
@@ -70,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="colorPicker" destination="bXu-Od-4tk" id="2mK-NQ-va8"/>
                         <outlet property="datePicker" destination="ufy-aR-XIi" id="UG8-CD-nPr"/>
                         <outlet property="itemPicker" destination="syc-Jl-ZOH" id="7w7-FQ-MDT"/>
                         <outlet property="itemsFromCollectionView" destination="Ckr-uc-UvJ" id="LMK-F3-isb"/>
