@@ -21,7 +21,7 @@ class ViewController: UIViewController {
           datePicker.text = dateFormatter.string(from: date)
       })
       // Setting up accessory view
-      datePicker.inputAccessoryView = AccessoryView.create("Select Date", doneTapped: {
+      datePicker.inputAccessoryView = AccessoryView("Select Date", doneTapped: {
         datePicker.resignFirstResponder()
       })
     }
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
       inputView.text = { string in return string }
       itemPicker.inputView = inputView
       // Setting up accessory view
-      itemPicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      itemPicker.inputAccessoryView = AccessoryView("Select item", doneTapped: {
         itemPicker.resignFirstResponder()
       })
     }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
       inputView.text = { string in return string }
       itemsFromTablePicker.inputView = inputView
       // Setting up accessory view
-      itemsFromTablePicker.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      itemsFromTablePicker.inputAccessoryView = AccessoryView("Select item", doneTapped: {
         itemsFromTablePicker.resignFirstResponder()
       })
     }
@@ -88,7 +88,7 @@ class ViewController: UIViewController {
       inputView.contains = { string in return selected.firstIndex(of: string) != nil }
       itemsFromCollectionView.inputView = inputView
       // Setting up accessory view
-      itemsFromCollectionView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      itemsFromCollectionView.inputAccessoryView = AccessoryView("Select item", doneTapped: {
         itemsFromCollectionView.resignFirstResponder()
       })
     }
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         print("Icon is \(icon)")
       }, height: 250)
       // Setting up accessory view
-      pickFontAwesomeIconView.inputAccessoryView = AccessoryView.create("Select item", doneTapped: {
+      pickFontAwesomeIconView.inputAccessoryView = AccessoryView("Select item", doneTapped: {
         pickFontAwesomeIconView.resignFirstResponder()
       })
     }
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
         return color.isEqual(selectedColor)
       }, height: 250, colorSize: 30)
       // Setting up accessory view
-      colorPicker.inputAccessoryView = AccessoryView.create("Select Color", doneTapped: {
+      colorPicker.inputAccessoryView = AccessoryView("Select Color", doneTapped: {
         colorPicker.resignFirstResponder()
       })
     }

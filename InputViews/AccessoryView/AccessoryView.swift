@@ -54,18 +54,19 @@ public class AccessoryView: UIView {
       ])
   }
 
-  public static func create(
+
+  public required init(
     _ title: String = "",
     doneTapped: (() -> Void)? = nil,
     addTapped: (() -> Void)? = nil,
-    shouldShowAdd: @escaping (() -> Bool) = { return false }
-    ) -> AccessoryView? {
-    let view = AccessoryView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
-    view.shouldShowAdd = shouldShowAdd
-    view.doneTapped = doneTapped
-    view.addTapped = addTapped
-    view.title = title
-    return view
+    shouldShowAdd: @escaping (() -> Bool) = { return false },
+    height: CGFloat = 44
+    ) {
+    super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height))
+    self.shouldShowAdd = shouldShowAdd
+    self.doneTapped = doneTapped
+    self.addTapped = addTapped
+    self.title = title
   }
 
   @objc func doneButtonTapped() {

@@ -1,7 +1,7 @@
 import UIKit
 
-extension UIColor {
-  convenience public init?(hexString: String) {
+public extension UIColor {
+  convenience init?(hexString: String) {
     var chars = Array(hexString.hasPrefix("#") ? hexString.dropFirst() : hexString[...])
     let red, green, blue, alpha: CGFloat
     switch chars.count {

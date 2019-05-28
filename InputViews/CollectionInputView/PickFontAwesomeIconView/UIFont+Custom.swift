@@ -1,4 +1,4 @@
-extension UIFont {
+public extension UIFont {
   static func registerFont(bundle: Bundle, fontName: String, fontExtension: String) -> Bool {
     guard let fontURL = bundle.url(forResource: fontName, withExtension: fontExtension) else {
       fatalError("Couldn't find font \(fontName)")
