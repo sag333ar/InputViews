@@ -19,6 +19,7 @@ public class AccessoryView: UIView {
   var doneTapped: (() -> Void)?
   var addTapped: (() -> Void)?
   var shouldShowAdd: (() -> Bool) = { return false }
+  var height: CGFloat = 44
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
@@ -63,10 +64,12 @@ public class AccessoryView: UIView {
     height: CGFloat = 44
     ) {
     super.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: height))
+    make()
     self.shouldShowAdd = shouldShowAdd
     self.doneTapped = doneTapped
     self.addTapped = addTapped
     self.title = title
+    self.height = height
   }
 
   @objc func doneButtonTapped() {
