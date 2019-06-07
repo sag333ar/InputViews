@@ -1,21 +1,21 @@
 PODS:
-  - InputViews (1.0.6):
-    - InputViews/AccessoryView (= 1.0.6)
-    - InputViews/CollectionInputView (= 1.0.6)
-    - InputViews/ColorPickerView (= 1.0.6)
-    - InputViews/DatePickerInputView (= 1.0.6)
-    - InputViews/NoCutPasteField (= 1.0.6)
-    - InputViews/PickerInputView (= 1.0.6)
-    - InputViews/TableInputView (= 1.0.6)
-  - InputViews/AccessoryView (1.0.6)
-  - InputViews/CollectionInputView (1.0.6):
-    - InputViews/CollectionInputView/PickFontAwesomeIconView (= 1.0.6)
-  - InputViews/CollectionInputView/PickFontAwesomeIconView (1.0.6)
-  - InputViews/ColorPickerView (1.0.6)
-  - InputViews/DatePickerInputView (1.0.6)
-  - InputViews/NoCutPasteField (1.0.6)
-  - InputViews/PickerInputView (1.0.6)
-  - InputViews/TableInputView (1.0.6)
+  - InputViews (1.0.8):
+    - InputViews/AccessoryView (= 1.0.8)
+    - InputViews/CollectionInputView (= 1.0.8)
+    - InputViews/ColorPickerView (= 1.0.8)
+    - InputViews/DatePickerInputView (= 1.0.8)
+    - InputViews/NoCutPasteField (= 1.0.8)
+    - InputViews/PickerInputView (= 1.0.8)
+    - InputViews/TableInputView (= 1.0.8)
+  - InputViews/AccessoryView (1.0.8)
+  - InputViews/CollectionInputView (1.0.8):
+    - InputViews/CollectionInputView/PickFontAwesomeIconView (= 1.0.8)
+  - InputViews/CollectionInputView/PickFontAwesomeIconView (1.0.8)
+  - InputViews/ColorPickerView (1.0.8)
+  - InputViews/DatePickerInputView (1.0.8)
+  - InputViews/NoCutPasteField (1.0.8)
+  - InputViews/PickerInputView (1.0.8)
+  - InputViews/TableInputView (1.0.8)
 
 DEPENDENCIES:
   - InputViews (from `../`)
@@ -25,8 +25,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InputViews: cc534f4df153ff3e1b6fc8a51647f4fcb799c98d
+  InputViews: fb6b34f1972318923f192a12a08d346751c86c5e
 
 PODFILE CHECKSUM: a2e0bf9e291bbefe92ed2d8ba7d4cef79dccd3ce
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.7.1
